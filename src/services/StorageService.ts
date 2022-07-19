@@ -1,12 +1,19 @@
 import { promises } from 'fs';
 import { URL } from 'url';
+import { DB_NAME } from '../constants/db.constants.js';
 
-const path = (path: string) => new URL(path, import.meta.url).pathname.slice(1);
+export enum DBKeys {
+	API_KEY = 'API_KEY',
+	CITY = 'CITY',
+}
 
-export type RequestBody = { key: string; value?: any };
+export type RequestBody = { key: DBKeys; value?: any };
 
 export default class StorageService {
-	private static filePath = path('../../weather-data.json');
+	private static filePath = new URL(
+		`../../${DB_NAME}`,
+		import.meta.url
+	).pathname.slice(1);
 	private static fileIsReady = true;
 
 	private static async isExist(filePath: string): Promise<boolean> {
