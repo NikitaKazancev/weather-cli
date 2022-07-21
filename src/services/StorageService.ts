@@ -25,7 +25,7 @@ export default class StorageService {
 		}
 	}
 
-	public static async get(key: string): Promise<any> {
+	public static async get(key: string): Promise<string | undefined> {
 		this.fileIsReady = false;
 
 		if (await this.isExist(this.filePath)) {
