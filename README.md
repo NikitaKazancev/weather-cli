@@ -1,3 +1,3 @@
 # weather-cli
 
-## Based on data from https://openweathermap.org/
+## Based on the data from https://openweathermap.org/
