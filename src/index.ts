@@ -31,15 +31,13 @@ saveKey(
 );
 saveKey(argsTypes.CITY, DBKeys.CITY, args.c, 'Город сохранён');
 
-if (args.h) LogService.help();
-
-function showWeather(weatherData: any) {
-	console.log(weatherData);
-}
+if (args[argsTypes.HELP]) LogService.help();
 
 async function app() {
-	const apiResult = await ErrorHandlerService.fetchAPI();
-	if (apiResult.type == 'success') showWeather(apiResult.body);
+	if (JSON.stringify(args).length == 2) {
+		const apiResult = await ErrorHandlerService.fetchAPI();
+		if (apiResult.type == 'success') LogService.showWeather(apiResult.body);
+	}
 }
 
 app();
