@@ -5,5 +5,7 @@
 Try this:
 
 ```shell
-$ node filename.js -h
+$ npm i -g weather-cli-nk_sm
+$ weather
+$ weather -h
 ```
