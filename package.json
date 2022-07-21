@@ -1,10 +1,10 @@
 {
 	"name": "weather-cli-nk_sm",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"description": "cli for weather forecast",
-	"main": "index.js",
+	"main": "weather.js",
 	"bin": {
-		"weather": "index.js"
+		"weather": "weather.js"
 	},
 	"type": "module",
 	"scripts": {
