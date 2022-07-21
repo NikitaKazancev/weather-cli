@@ -1,2 +1,2 @@
-import * as _ from './dist';
-export default _;
+import weatherCLI from './dist/index.js';
+export default weatherCLI;

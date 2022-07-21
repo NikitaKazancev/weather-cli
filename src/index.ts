@@ -39,5 +39,3 @@ export default async function weatherCLI() {
 		if (apiResult.type == 'success') LogService.showWeather(apiResult.body);
 	}
 }
-
-weatherCLI();
